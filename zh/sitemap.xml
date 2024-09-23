@@ -19,23 +19,6 @@
                 href="https://laoyuyi.github.io/zh/categories/"
                 />
   </url><url>
-    <loc>https://laoyuyi.github.io/zh/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://laoyuyi.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ru"
-                href="https://laoyuyi.github.io/ru/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://laoyuyi.github.io/zh/tags/"
-                />
-  </url><url>
     <loc>https://laoyuyi.github.io/zh/</loc>
     <xhtml:link
                 rel="alternate"
@@ -51,6 +34,23 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://laoyuyi.github.io/zh/"
+                />
+  </url><url>
+    <loc>https://laoyuyi.github.io/zh/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://laoyuyi.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="https://laoyuyi.github.io/ru/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://laoyuyi.github.io/zh/tags/"
                 />
   </url>
 </urlset>
