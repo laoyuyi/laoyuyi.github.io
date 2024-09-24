@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://laoyuyi.github.io/sitemap.xml
