@@ -4,47 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9024f87f-c598-44a0-8697-d79e6b8e012f" name="更改" comment="message">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/public.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/example/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/example/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/example/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/categories/example/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/hugo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/hugo/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/hugo/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/categories/hugo/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/categories/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/categories/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/2017/06/13/a-quick-note/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/2017/06/13/a-quick-note/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/2017/06/14/another-note/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/2017/06/14/another-note/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/note/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/note/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/note/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/2015/07/23/lorem-ipsum/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/2015/07/23/lorem-ipsum/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/2016/02/14/a-plain-markdown-post/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/2016/02/14/a-plain-markdown-post/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/post/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/post/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/blogdown/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/blogdown/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/blogdown/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tags/blogdown/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tags/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/markdown/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/markdown/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/markdown/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tags/markdown/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/mathjax/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/mathjax/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/mathjax/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tags/mathjax/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/pandoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/pandoc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/pandoc/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tags/pandoc/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/rstudio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/rstudio/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/rstudio/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tags/rstudio/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/tutorial/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tags/tutorial/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/tutorial/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tags/tutorial/index.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9024f87f-c598-44a0-8697-d79e6b8e012f" name="更改" comment="message" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727171418961</updated>
-      <workItem from="1727171420015" duration="646000" />
+      <workItem from="1727171420015" duration="1267000" />
     </task>
     <task id="LOCAL-00001" summary="message">
       <option name="closed" value="true" />
@@ -105,7 +65,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727172066133</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="message">
+      <option name="closed" value="true" />
+      <created>1727172749376</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727172749376</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
