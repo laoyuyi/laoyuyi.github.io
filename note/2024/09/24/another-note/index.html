@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>【笔记】我的Deep Learning学习笔记 | Let&#39;s fuck</title>
+    <title>&lt;Chinese&gt; My Deep Learning Note | Let&#39;s fuck</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     
@@ -28,7 +28,7 @@
     </nav>
 
 <div class="article-meta">
-<h1><span class="title">【笔记】我的Deep Learning学习笔记</span></h1>
+<h1><span class="title"><Chinese> My Deep Learning Note</span></h1>
 <h2 class="author">Yuyi Lao</h2>
 <h2 class="date">2024/09/24</h2>
 </div>
@@ -126,7 +126,7 @@ $𝛽$是一个可学习的超参数，默认为$1$。$Swish$函数的独特之�
 $$SwiGLU(x)=Swish(W_1x+b_1)⊗(W_2x+b_2) $$
 <blockquote>
 <p>[!note] 注释
-$SwiGLU$函数相当于把$GLU$和$Swish$结合在了一起，把$GLU$当中的$Sigmoid$换成了$Swish$，结合了二者的优点，$1+1>2$。
+$SwiGLU$函数相当于把$GLU$和$Swish$结合在了一起，把$GLU$当中的$Sigmoid$换成了$Swish$，结合了二者的优点，$1+1&gt;2$。
 $SiLU$函数：LlaMa2模型采用的是$SiLU$函数，$SiLU$就是$β=1$时的$Swish$与$GLU$结合的$SwiGLU$函数</p>
 </blockquote>
 <ul>
@@ -332,7 +332,7 @@ $$V_n = X \times W^V_n$$
 </p>
 $$Attention_n(Q_n,K_n,V_n)=softmax(\frac{Q_nK_n^T}{\sqrt{d_k}})V_n$$
 <p>
-将多组$Attention(Attention_0,Attention_1,...,Attention_n)$进行拼接(cancat)，再乘以矩阵$W^O$做一次线性变换降低维度，得到最终的$MultiHead:$
+将多组$Attention(Attention_0,Attention_1,&hellip;,Attention_n)$进行拼接(cancat)，再乘以矩阵$W^O$做一次线性变换降低维度，得到最终的$MultiHead:$
 </p>
 $$MultiHead = Concat(Attention_0,Attention_1,...,Attention_n)W^O$$
 <blockquote>
