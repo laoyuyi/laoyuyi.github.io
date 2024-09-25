@@ -45,7 +45,7 @@
 <blockquote>
 <p>注意：归一化与标准化是两个不同的概念。归一化是指将数据缩放到\([0, 1]\)或\([-1, 1]\)区间内，标准化指的是将数据转换成均值为$0$，标准差为$1$的分布。</p>
 </blockquote>
-<p>(1) $LayerNorm$：设\(x_{ij}\)表示第\(i\)个样本的第\(j\)个特征，\(n\)为特征数量，则$LayerNorm$的计算公式为：
+<p>(1) \(LayerNorm\)：设\(x_{ij}\)表示第\(i\)个样本的第\(j\)个特征，\(n\)为特征数量，则LayerNorm的计算公式为：
 </p>
 $$
 y_{ij} = \gamma \frac{x_{ij} - \frac{1}{n} \sum_{j=1}^{n} x_{ij}}{\sqrt{\frac{1}{n} \sum_{j=1}^{n} (x_{ij} - \frac{1}{n} \sum_{j=1}^{n} x_{ij})^2 + \epsilon}} + \beta
@@ -54,36 +54,36 @@ $$
 <p>其中，$\epsilon$是一个小常数，用来防止除以零的情况。可学习参数\(\gamma\)和\(\beta\)进行用于缩放和平移，使得模型可以学习到最佳的归一化效果。
 每个元素的值减去样本每个特征的平均值，再除以标准差，最后再进行缩放和平移。</p>
 </blockquote>
-<p>(2) $BatchNorm$：设每个特征的均值为$μ$，方差为$σ^2$，则$BatchNorm$的计算公式为
+<p>(2) \(BatchNorm\)：设每个特征的均值为μ，方差为σ^2，则BatchNorm的计算公式为
 </p>
 $$
 y_{ij} = \gamma \frac{x_i - \mu}{\sqrt{\sigma^2 + \epsilon}} + \beta
 $$
 <blockquote>
-<p>这里的$\gamma$和$\beta$是可学习的参数，对于每个特征维度都有一个对应的$\gamma$和$\beta$值。在训练过程中，这些参数会通过反向传播算法进行更新。</p>
+<p>这里的\gamma和\beta是可学习的参数，对于每个特征维度都有一个对应的\gamma和\beta值。在训练过程中，这些参数会通过反向传播算法进行更新。</p>
 </blockquote>
-<p>(3) $RMSNorm$：
+<p>(3) RMSNorm：
 </p>
 $$
 y_{ij} = \frac{x}{\sqrt{Mean(x^2)+ε}}·γ
 $$
 <blockquote>
-<p>$RMSNorm$比$Layernorm$计算更简便，节约了计算速度，</p>
+<p>RMSNorm比Layernorm计算更简便，节约了计算速度，</p>
 </blockquote>
 <h5 id="前向传播过程">前向传播过程</h5>
 <ul>
 <li>前向传播(Forward Propagation)指神经网络中从输入层到输出层的数据传递过程。在这个过程中，输入数据从输入神经元开始，经过多层神经元的加权求和后经过激活函数生成输出结果。具体步骤如下：
-![[img/DNN.png]]
+<img src="img/DNN.png" alt="">
 $$y(x)=g(\sum_{i=1}^{n}w_ix_i+b)$$</li>
 </ul>
 <blockquote>
-<p>其中，$y(x)$表示神经网络的输出，$g$表示‌激活函数，$w_i$表示第$i$个输入数据的权重，$x_i$表示第$i$个输数据号，$b$为偏置项。前向传播的主要目的是基于当前的权重和偏置参数，计算模型对于给定输入的预测输出。</p>
+<p>其中，y(x)表示神经网络的输出，g表示‌激活函数，w_i表示第i个输入数据的权重，x_i表示第i个输数据号，b为偏置项。前向传播的主要目的是基于当前的权重和偏置参数，计算模型对于给定输入的预测输出。</p>
 </blockquote>
 <ul>
 <li>
 <p><strong>激活函数</strong></p>
 <p>在神经网络中除了线性层外往往还需要加入激活函数，没有激活函数的神经网络只是线性函数，无法拟合曲线，任何一条曲线都能用多条线性函数来逼近，而激活函数使神经网络具有分段的能力，根据万能逼近原理(universal approximation theorrm)，3层神经网络可以逼近任意曲线<a href="https://zhuanlan.zhihu.com/p/385531651"></a>。以下是神经网络中最常见的三个激活函数：
-(1) $Sigmoid$、$tanh$、$Relu$激活函数：
+(1) Sigmoid、tanh、Relu激活函数：
 </p>
 $$
 \begin{align}
@@ -99,26 +99,26 @@ $$
 </li>
 </ul>
 <blockquote>
-<p>$Relu$函数反向传播求导简单，减少计算量</p>
+<p>Relu函数反向传播求导简单，减少计算量</p>
 </blockquote>
-<p>(2) $GLU$激活函数：
+<p>(2) GLU激活函数：
 </p>
 $$GLU(x)=Sigmoid(W_1x+b_1)⊗(W_2x+b_2) $$
 <blockquote>
-<p>$x$是输入向量，$⊗$表示逐元素相乘。$GLU$函数将输入向量通过两个不同的线性变换，得到了两个不同的向量，其中一个向量不经过激活函数，另一个向量经过$Sigmoid$函数后其元素被映射到$0-1$之间，若元素为$1$，则另一向量对应位置的元素不变，若为零则不允许通过，感觉有点类似于$LSTM$的门控结构，个人理解$GLU$的作用类似于$LSTM$中的遗忘门。</p>
+<p>x是输入向量，⊗表示逐元素相乘。GLU函数将输入向量通过两个不同的线性变换，得到了两个不同的向量，其中一个向量不经过激活函数，另一个向量经过Sigmoid函数后其元素被映射到0-1之间，若元素为1，则另一向量对应位置的元素不变，若为零则不允许通过，感觉有点类似于LSTM的门控结构，个人理解GLU的作用类似于LSTM中的遗忘门。</p>
 </blockquote>
-<p>(3) $Swish$激活函数：
+<p>(3) Swish激活函数：
 </p>
 $$Swish(x)=x⊗Sigmoid(βx)$$
 <blockquote>
-<p>$𝛽$是一个可学习的超参数，默认为$1$。$Swish$函数的独特之处在于其非线性和自适应性，当输入接近$0$时，行为类似$ReLU$函数，而在其他区域，其斜率可以根据输入值进行自我调整。相比传统的$ReLU$无法调整的一条直线更好。</p>
+<p>𝛽是一个可学习的超参数，默认为1。Swish函数的独特之处在于其非线性和自适应性，当输入接近0时，行为类似ReLU函数，而在其他区域，其斜率可以根据输入值进行自我调整。相比传统的ReLU无法调整的一条直线更好。</p>
 </blockquote>
-<p>(4) $SwiGLU$激活函数：
+<p>(4) SwiGLU激活函数：
 </p>
 $$SwiGLU(x)=Swish(W_1x+b_1)⊗(W_2x+b_2) $$
 <blockquote>
-<p>$SwiGLU$函数相当于把$GLU$和$Swish$结合在了一起，把$GLU$当中的$Sigmoid$换成了$Swish$，结合了二者的优点，$1+1&gt;2$。
-$SiLU$函数：LlaMa2模型采用的是$SiLU$函数，$SiLU$就是$β=1$时的$Swish$与$GLU$结合的$SwiGLU$函数</p>
+<p>SwiGLU函数相当于把GLU和Swish结合在了一起，把GLU当中的Sigmoid换成了Swish，结合了二者的优点，1+1&gt;2。
+SiLU函数：LlaMa2模型采用的是SiLU函数，SiLU就是β=1时的Swish与GLU结合的SwiGLU函数</p>
 </blockquote>
 <ul>
 <li>
@@ -136,11 +136,11 @@ $$
 </li>
 </ul>
 <blockquote>
-<p>其中，$y_i$是第$i$个真实值，$\hat{y}_i$是模型第$i$个预测值，$n$为数据总数。</p>
+<p>其中，y_i是第i个真实值，\hat{y}_i是模型第i个预测值，n为数据总数。</p>
 <ul>
-<li>$MSE$是预测值与真实值之差的平方的平均值，函数通过差值的平方放大误差的影响；</li>
-<li>$RMSE$实际上是$MSE$的平方根，$RMSE$保留了$MSE$的特性，但它将误差单位转换回原始数据的尺度，使得解释更加直观；</li>
-<li>$MAE$是预测值与真实值之差的绝对值的平均值。它比$MSE$更能抵抗异常值的影响，因为绝对值不会像平方那样放大误差。</li>
+<li>MSE是预测值与真实值之差的平方的平均值，函数通过差值的平方放大误差的影响；</li>
+<li>RMSE实际上是MSE的平方根，RMSE保留了MSE的特性，但它将误差单位转换回原始数据的尺度，使得解释更加直观；</li>
+<li>MAE是预测值与真实值之差的绝对值的平均值。它比MSE更能抵抗异常值的影响，因为绝对值不会像平方那样放大误差。</li>
 </ul>
 </blockquote>
 <p>(2) 交叉熵损失 (Cross-Entropy Loss)：</p>
@@ -148,14 +148,13 @@ $$
 </p>
 $$\text{CE}=-\frac{1}{n}\sum_{i=1}^{n}[y_i\log(p_i) + (1-y_i)\log(1-p_i)]$$
 <blockquote>
-<p>其中，$p_i$是模型预测第$i$个观测属于正类的概率，$y_i$是第$i$个观测的真实标签（通常为$0$或$1$）。</p>
+<p>其中，p_i是模型预测第i个观测属于正类的概率，y_i是第i个观测的真实标签（通常为0或1）。</p>
 </blockquote>
 <p>对于多分类问题，交叉熵损失的计算公式如下：
 </p>
 $$\text{CE} = -\frac{1}{n}\sum_{i=1}^{n}\sum_{c=1}^{C}y_{ic}\log(p_{ic})$$
 <blockquote>
-<p>其中，$C$是类别的数量，$y_{ic}$是指示变量，若第$i$个观测属于第$c$类，则为$1$，否则为$0$，$p_{ic}$是模型预测第$i$个观测属于第$c$类的概率。
-交叉熵损失用于分类问题，特别是当输出是概率分布时。它度量了两个概率分布之间的差异，鼓励模型预测与真实标签尽可能接近的概率分布。</p>
+<p>其中，C是类别的数量，y_{ic}是指示变量，若第i个观测属于第c类，则为1，否则为0，p_{ic}是模型预测第i个观测属于第c类的概率。交叉熵损失用于分类问题，特别是当输出是概率分布时。它度量了两个概率分布之间的差异，鼓励模型预测与真实标签尽可能接近的概率分布。</p>
 </blockquote>
 <h5 id="反向传播过程">反向传播过程</h5>
 <ul>
@@ -169,24 +168,24 @@ $$\text{CE} = -\frac{1}{n}\sum_{i=1}^{n}\sum_{c=1}^{C}y_{ic}\log(p_{ic})$$
 <hr>
 <h4 id="循环神经网络">循环神经网络</h4>
 <p>循环神经网络<a href="https://www.bilibili.com/video/BV1z5411f7Bm/?spm_id_from=333.337.search-card.all.click"></a>（Recurrent Neural Network, RNN）又叫递归神经网络，很简单，相比于普通的全连接神经网络就是把上一次训练的权重与这一次训练的输出值同时输入神经网络。循环神经网络的结构如下：</p>
-<p>![[img/Pasted image 20240603002024.png|400]]</p>
+<p>![](img/Pasted image 20240603002024.png)</p>
 <ul>
 <li><strong>计算公式：</strong>
 $$Y_n=softmax(\sum^{n}_{n=1}tanh(UX_n​+WS_{n−1}​))$$</li>
 </ul>
 <blockquote>
-<p>$X_n$为输入内容，$Y_n$为输出内容，$U、V、W$为权重，$S_n​$为神经元，$c$为输出的个数​.
+<p>X_n为输入内容，Y_n为输出内容，U、V、W为权重，S_n​为神经元，c为输出的个数​.
 根据问题的需要，循环神经网络的隐层可以是全连接的，也可以是一对一的。此外，假设每一层级之间的权重是相同的，可降低计算量。循环神经网络的常见变体有长短时记忆神经网络和门控循环单元。</p>
 </blockquote>
 <h5 id="长短时记忆神经网络">长短时记忆神经网络</h5>
-<p>长短时记忆神经网络(long short-term memory neural network, LSTM)是一种主要用于处理时序问题的神经网络结构，由循环神经网络改进而来。相比于传统的循环神经网络，长短时记忆神经网络能够深入挖掘时间序列数据中的固有规律并具有长时记忆功能。$LSTM$的结构包括输入门$i_t$，遗忘门$f_t$，输出门$o_t$，其结构图如下：</p>
-<p>![[img/lstm.png]]</p>
+<p>长短时记忆神经网络(long short-term memory neural network, LSTM)是一种主要用于处理时序问题的神经网络结构，由循环神经网络改进而来。相比于传统的循环神经网络，长短时记忆神经网络能够深入挖掘时间序列数据中的固有规律并具有长时记忆功能。LSTM的结构包括输入门i_t，遗忘门f_t，输出门o_t，其结构图如下：</p>
+<p><img src="img/lstm.png" alt=""></p>
 <ul>
 <li><strong>遗忘门：</strong>
 $$f_t=σ(W_{xf}x_t+b_{xf}+W_{hf}h_{t-1}+b_{hf})$$</li>
 </ul>
 <blockquote>
-<p>式中，输入值$x_t$和上一时刻的输出值$h_{t-1}$经过$Sigmoid$激活函数后，生成一个$0$~$1$之间的向量，遗忘门通过对记忆细胞的点乘操作对记忆内容进行选择性遗忘，若向量中某元素的值为$0$，则经过点乘后记忆细胞中对应值全部遗忘，若向量中某元素的值为$1$，则全部保留。$W_{xf}$和$W_{hf}$分别为遗忘门的权重，$b_{xf}$和$b_{hf}$为偏置项。</p>
+<p>式中，输入值$x_t$和上一时刻的输出值$h_{t-1}$经过$Sigmoid$激活函数后，生成一个$0$~$1$之间的向量，遗忘门通过对记忆细胞的点乘操作对记忆内容进行选择性遗忘，若向量中某元素的值为$0$，则经过点乘后记忆细胞中对应值全部遗忘，若向量中某元素的值为$1$，则全部保留。W_{xf}和W_{hf}分别为遗忘门的权重，$b_{xf}$和$b_{hf}$为偏置项。</p>
 </blockquote>
 <ul>
 <li><strong>记忆门：</strong>
@@ -213,24 +212,22 @@ $$h_t=o_t⊙tanh(c_t)$$</li>
 </blockquote>
 <ul>
 <li><strong>具体流程：</strong>
-![[img/lstmgif图.gif]]</li>
+<img src="img/lstmgif%E5%9B%BE.gif" alt=""></li>
 </ul>
 <blockquote>
-<p>[!note]
-LSTM的门展开后就是Dense层
+<p>LSTM的门展开后就是Dense层
 LSTM应该记忆什么遗忘什么取决于门的权重，由网络训练得到</p>
 </blockquote>
 <h5 id="门控循环单元">门控循环单元</h5>
 <p>门控循环单元(gated recurrent unit, GRU)由长短时记忆神经网络改进而来，门控循环单元与长短时记忆神经网络效果相似，但门控循环单元模型更简洁，$GRU$的结构与计算公式如下所示：</p>
-<p>![[img/gru.png]]</p>
+<p><img src="img/gru.png" alt=""></p>
 <ul>
 <li><strong>重置与更新门：</strong>
 $$ R_t​=σ(X_t​W_{xr}​+H_{t−1}​W_{hr}​+b_r​)$$
 $$ Z_t=σ(X_tW_{xz}+H_{t-1}W_{hz}+b_z)$$</li>
 </ul>
 <blockquote>
-<p>[!note] 注释
-$R_t, Z_t$分别为时刻$t$的重置门和更新门，$H_t$是时刻$t$的输出，$X_t$是时刻$t$的输入，$W_{xr}和W_{hr}$为重置门的权重，$b_r和b_r$为重置门的偏置项，$W_{xz}和W_{hz}$为更新门的权重，$b_z和b_z$为更新门的偏置项，$R_t, Z_t$均为0~1之间的向量。</p>
+<p>$R_t, Z_t$分别为时刻$t$的重置门和更新门，$H_t$是时刻$t$的输出，$X_t$是时刻$t$的输入，$W_{xr}和W_{hr}$为重置门的权重，$b_r和b_r$为重置门的偏置项，$W_{xz}和W_{hz}$为更新门的权重，$b_z和b_z$为更新门的偏置项，$R_t, Z_t$均为0~1之间的向量。</p>
 </blockquote>
 <ul>
 <li><strong>隐藏状态</strong>
@@ -238,16 +235,15 @@ $$ \tilde H_t=tanh(X_t​W_{xh​}+(R_t​⊙H_{t−1}​)W_{hh​}+b_h$$
 $$ H_t=Z_t​⊙H_{t−1}​+(1−Z_t​)⊙\tilde H_t$$</li>
 </ul>
 <blockquote>
-<p>[!note] 注释
-$\tilde H_t$为候选隐藏状态，$Z_t$表示遗忘，反之$(1−Z_t​)$表示记忆，$W_{xh​}$和$W_{hh​}$为隐藏状态的权重，$b_h$为隐藏状态的偏置项。
+<p>$\tilde H_t$为候选隐藏状态，$Z_t$表示遗忘，反之$(1−Z_t​)$表示记忆，$W_{xh​}$和$W_{hh​}$为隐藏状态的权重，$b_h$为隐藏状态的偏置项。
 有权重的地方就表明这里有一个$Dense$层。如果将重置门$R_t$设为$1$，更新门设为$Z_t$设为$0$，就是一个标准的循环神经网络。</p>
 </blockquote>
 <ul>
 <li><strong>具体流程：</strong>
-![[img/grugif图.gif]]</li>
+<img src="img/grugif%E5%9B%BE.gif" alt=""></li>
 </ul>
 <blockquote>
-<p>[!CITE]- 参考资料
+<p>参考资料:
 <a href="https://blog.csdn.net/zyf918/article/details/136172798">https://blog.csdn.net/zyf918/article/details/136172798</a></p>
 </blockquote>
 <hr>
@@ -255,7 +251,7 @@ $\tilde H_t$为候选隐藏状态，$Z_t$表示遗忘，反之$(1−Z_t​)$表�
 <ul>
 <li>
 <p>Transformer结构框架图：
-![[img/transformer.png]]</p>
+<img src="img/transformer.png" alt=""></p>
 </li>
 <li>
 <p><strong>输入部分</strong></p>
@@ -379,7 +375,7 @@ $$(R_m^{2×2}q)^⊤(R_n^{2×2}k)=q^{⊤}(R^{2×2}_m)^TR_n^{2×2}k=q^⊤R_{n−m}
 <blockquote>
 <p>其中，$θ$是一个常量，它的具体原理是让词向量在空间上发生旋转，从而把位置信息嵌入到词向量中，这也是为什么它叫旋转位置编码。可以看到相对位置信息$(n−m)$在$q$与$k$相乘后嵌入到了词向量中，形象过程可以看下图：</p>
 </blockquote>
-<p>![[img/RoPE.png]]</p>
+<p><img src="img/RoPE.png" alt=""></p>
 <ul>
 <li>词向量一般不可能是二维，要想对高维词向量进行旋转，需要将旋转矩阵拓展到高维：</li>
 </ul>
@@ -483,12 +479,12 @@ $$x_t = \sqrt{1-α_t}×ε_t+\sqrt{α_t}×(\sqrt{1-α_{t-1}}×ε_{t-1}+\sqrt{α_{
 <p>又称Stable Diffusion</p>
 </li>
 </ul>
-<p>![[img/diffusion.png]]</p>
+<p><img src="img/diffusion.png" alt=""></p>
 <blockquote>
 <p>参考资料:
 <a href="https://www.bilibili.com/video/BV1Di4y1c7Zm/?share_source=copy_web&amp;vd_source=59e03da0555efae2883b4a6f21e8f47b">Transformer从零详细解读(可能是你见过最通俗易懂的讲解)</a>
 <a href="https://www.bilibili.com/video/BV1UL411g7aX/?spm_id_from=333.337.search-card.all.click&amp;vd_source=3749948871311220e961685a5ac2a7a7">手推transformer_哔哩哔哩</a>
-![[img/mlkv-Transformer.png]]</p>
+<img src="img/mlkv-Transformer.png" alt=""></p>
 </blockquote>
 <hr>
 <h4 id="深度学习前沿技术">深度学习前沿技术</h4>
@@ -496,7 +492,7 @@ $$x_t = \sqrt{1-α_t}×ε_t+\sqrt{α_t}×(\sqrt{1-α_{t-1}}×ε_{t-1}+\sqrt{α_{
 <h5 id="mambaselective-state-space-model-mamba">Mamba(Selective State Space Model, Mamba)</h5>
 <p><strong>状态空间模型(State Space Model, SSM)</strong></p>
 <p>状态空间模型是一种用于分析和预测时间序列数据的统计模型。它将系统的动态行为表示为一组状态变量的演化，以及这些状态变量与观测到的数据之间的关系。状态空间模型通常由两部分组成：状态方程和观测方程。</p>
-<p>![[img/ssm.png]]</p>
+<p><img src="img/ssm.png" alt=""></p>
 <ul>
 <li>
 <p><strong>状态方程</strong></p>
