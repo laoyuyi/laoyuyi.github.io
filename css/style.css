@@ -3,12 +3,8 @@ body {
   margin: auto;
   padding: 1em;
   line-height: 1.5;
-}
-
-html {
   background-color: #20202000;
 }
-
 
 /* header and footer areas */
 .menu { padding: 0; }
