@@ -3,7 +3,7 @@ body {
   margin: auto;
   padding: 1em;
   line-height: 1.5;
-  background-color: #363636;
+  background-color: rgb(45, 46, 47);
 }
 
 /* header and footer areas */
