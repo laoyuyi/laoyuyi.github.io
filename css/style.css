@@ -3,10 +3,13 @@ body {
   margin: auto;
   padding: 1em;
   line-height: 1.5;
-  background-color: rgb(53, 56, 57);
+  background-color: rgb(58, 62, 63);
   color: #ffffff;
 }
 
+a {
+  color: rgb(66, 142, 230);
+}
 /* header and footer areas */
 .menu { padding: 0; }
 .menu li { display: inline-block; }
