@@ -9,17 +9,17 @@
     <lastBuildDate>Tue, 24 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://langyuyi.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>深度学习学习笔记</title>
+      <title>Note | Deep Learning学习记录</title>
       <link>https://langyuyi.github.io/article/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://langyuyi.github.io/article/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description></description>
     </item>
     <item>
-      <title>组会文献汇报PPT1</title>
-      <link>https://langyuyi.github.io/article/%E7%BB%84%E4%BC%9A%E6%96%87%E7%8C%AE%E6%B1%87%E6%8A%A5ppt1/</link>
+      <title>Slide | ChemDFM Dialogue Foundation Model for Chemistry文献汇报1</title>
+      <link>https://langyuyi.github.io/article/chemdfm-dialogue-foundation-model-for-chemistry%E6%96%87%E7%8C%AE%E6%B1%87%E6%8A%A51/</link>
       <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://langyuyi.github.io/article/%E7%BB%84%E4%BC%9A%E6%96%87%E7%8C%AE%E6%B1%87%E6%8A%A5ppt1/</guid>
+      <guid>https://langyuyi.github.io/article/chemdfm-dialogue-foundation-model-for-chemistry%E6%96%87%E7%8C%AE%E6%B1%87%E6%8A%A51/</guid>
       <description></description>
     </item>
     <item>
@@ -27,7 +27,7 @@
       <link>https://langyuyi.github.io/log/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://langyuyi.github.io/log/</guid>
-      <description> 2024/09/25: 今天什么也没干，睡觉。 2024/09/24: 今天完成了个人博客的部署。 </description>
+      <description>2024/09/25: 睡觉。&#xA;2024/09/25: 今天什么也没干，睡觉。&#xA;2024/09/24: 今天完成了个人博客的部署。</description>
     </item>
   </channel>
 </rss>
