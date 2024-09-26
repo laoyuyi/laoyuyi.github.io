@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Note on My Page</title>
+    <link>https://langyuyi.github.io/categories/note/</link>
+    <description>Recent content in Note on My Page</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://langyuyi.github.io/categories/note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chinese | My Deep Learning Note</title>
+      <link>https://langyuyi.github.io/post/my-deep-learning-note/</link>
+      <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://langyuyi.github.io/post/my-deep-learning-note/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

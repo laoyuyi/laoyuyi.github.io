@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on My Page</title>
-    <link>https://langyuyi.github.io/</link>
-    <description>Recent content in Home on My Page</description>
+    <title>Posts on My Page</title>
+    <link>https://langyuyi.github.io/post/</link>
+    <description>Recent content in Posts on My Page</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 26 Sep 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://langyuyi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://langyuyi.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>文献汇报ppt1</title>
       <link>https://langyuyi.github.io/post/%E6%96%87%E7%8C%AE%E6%B1%87%E6%8A%A51/</link>
@@ -21,13 +21,6 @@
       <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://langyuyi.github.io/post/my-deep-learning-note/</guid>
       <description></description>
-    </item>
-    <item>
-      <title>My Log</title>
-      <link>https://langyuyi.github.io/log/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://langyuyi.github.io/log/</guid>
-      <description> 2024/09/25: 今天什么也没干，睡觉。 2024/09/24: 今天完成了个人博客的部署。 </description>
     </item>
   </channel>
 </rss>
