@@ -8,7 +8,7 @@ body {
     background-color: rgb(25,63,144);
     overflow: hidden;
     color: white;
-    padding: 0px 8px;
+    padding: 0px 20px;
     margin-bottom: 70px;
     align-items: center;
 }
@@ -20,7 +20,7 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    margin-top: 10px;
+    margin-top: 2px;
 }
 
 .navbar a:hover {
@@ -39,7 +39,7 @@ body {
     font-size: 17px;
     font-weight: bold;
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .footer {
@@ -69,10 +69,10 @@ body {
 }
 
 .search-input {
-    width: 40%;
+    width: 800px;
     padding: 12px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     border-radius: 4px 0 0 4px;
 }
 
@@ -84,13 +84,6 @@ body {
     color: #fff;
     cursor: pointer;
     border-radius: 0 4px 4px 0;
-}
-
-img {
-    max-width: 25%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
 }
 
 .enzyme-types {
@@ -113,8 +106,7 @@ img {
     top: 0;
     left: 0;
     right: 0;
-    /*bottom: 57%;*/
-    height: 410px;
+    height: 450px;
     background-color: rgba(18, 100, 165);
     z-index: -1;
 }
