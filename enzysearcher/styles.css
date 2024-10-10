@@ -8,7 +8,7 @@ body {
     background-color: rgb(25,63,144);
     overflow: hidden;
     color: white;
-    padding: 0px 10px;
+    padding: 0px 8px;
     margin-bottom: 70px;
     align-items: center;
 }
@@ -20,6 +20,7 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    margin-top: 5px;
 }
 
 .navbar a:hover {
@@ -31,8 +32,9 @@ body {
     float: left;
     font-size: 20px;
     font-weight: bold;
-    margin-right: 20px;
-    margin-top: 11px;
+    margin-left: 8px;
+    margin-right: 10px;
+    margin-top: 14px;
 }
 
 .navbar-github {
@@ -40,7 +42,7 @@ body {
     font-size: 17px;
     font-weight: bold;
     margin-right: 20px;
-    margin-top: 13px;
+    margin-top: 20px;
 }
 
 .footer {
@@ -126,7 +128,7 @@ img {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 61%;
+    bottom: 60%;
     background-color: rgba(18, 100, 165);
     z-index: -1;
 }
