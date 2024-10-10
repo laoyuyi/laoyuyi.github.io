@@ -5,7 +5,7 @@ body {
 }
 
 .navbar {
-    background-color: rgb(25,63,144);
+    background-color: rgb(25, 63, 144);
     overflow: hidden;
     color: white;
     padding: 0px 20px;
@@ -47,7 +47,7 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(25,63,144);
+    background-color: rgb(25, 63, 144);
     color: white;
     text-align: center;
     padding: 50px 0;
@@ -80,7 +80,7 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
-    background-color: rgb(25,63,144);
+    background-color: rgb(25, 63, 144);
     color: #fff;
     cursor: pointer;
     border-radius: 0 4px 4px 0;
@@ -97,7 +97,7 @@ body {
     margin-right: 20px;
     cursor: pointer;
     font-size: 16px;
-    color: rgb(255,255,255)
+    color: rgb(255, 255, 255)
 }
 
 .search-page::before {
